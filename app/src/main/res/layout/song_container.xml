@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+   android:background="@drawable/gradient1"
+    android:layout_marginVertical="2sp"
+    android:id="@+id/songContainer"
+    android:layout_height="100sp">
+
+    <ImageView
+        android:layout_width="100sp"
+        android:layout_margin="5sp"
+        android:id="@+id/song_container_musicAlbum"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="hii i am robin hud"
+        android:textColor="#fff"
+        android:textSize="25sp"
+        android:textStyle="normal"
+        android:gravity="center"
+        android:id="@+id/song_container_name"
+        />
+
+
+</LinearLayout>

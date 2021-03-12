@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".Player">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:background="@drawable/gradient2"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="40sp"
+            android:background="@drawable/player_image"
+            android:id="@+id/player_image"
+            />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:background="@drawable/gradient1">
+
+        <ImageView
+            android:id="@+id/prev"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:background="@drawable/ic_prev"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView"
+            app:layout_constraintEnd_toStartOf="@+id/isRunning"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:background="@drawable/ic_next"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/isRunning"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/isRunning"
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:background="@drawable/ic_play"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView"
+            app:layout_constraintEnd_toStartOf="@+id/next"
+            app:layout_constraintStart_toEndOf="@+id/prev"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="36sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/isRunning">
+
+        </androidx.appcompat.widget.AppCompatSeekBar>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
